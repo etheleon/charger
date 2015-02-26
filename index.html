@@ -61,7 +61,10 @@
     <h2>Charger Components</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="./assets/img/charger.jpg" alt="charger"></p>
+    <ul>
+<li>Module: Lithium Battery Charge V0.2
+<img src="./assets/img/charger.jpg" alt="charger"></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -73,15 +76,11 @@
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Module
-
-<ul>
-<li>Lithium Battery Charge V0.2</li>
-</ul></li>
-<li>Lithium Ion (7V 150mAH)</li>
+<li>Lithium Ion (7V 150mAH)
+<img src="http://www.adafruit.com/images/1200x900/1317-00.jpg" alt="battery"></li>
 </ul>
 
-<p>[Schema of the chip][1]</p>
+<p>[Click here for Schema of the chip][1]</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -92,8 +91,7 @@
     <h2>Schematics</h2>
   </hgroup>
   <article data-timings="">
-    <p>Specifications
-<img src="./assets/img/ChipSchematic.png" alt="Charge controller IC"></p>
+    <p><img src="./assets/img/ChipSchematic.png" alt="Charge controller IC"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -104,9 +102,10 @@
     <h2>Initial Tasks</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Check the charing settings of the charge controller IC for the current and voltage it will be charging at.</li>
-<li>Check the Lithium Ion Battery&#39;s settings for the charging current and capacity. Compare the controller IC and the battery and see if they are compatible.</li>
+    <p>Check:</p>
+
+<ol>
+<li>if charing settings of the <strong>charge controller IC</strong>   are comparable with Lithium Ion Battery&#39;s settings wrt. current and capacity.</li>
 </ol>
 
   </article>
@@ -115,13 +114,12 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Issue: Rating Difference</h2>
+    <h2>Difference</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Off the shelf charger <strong>NOT</strong> suitable for charging the basic lithium battery itself</li>
-<li>Based of calculation provided in the dataseet, the charger will charge at 0.6A whereas the battery is rated at charging current of 150mAh</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li>Off the shelf charger was <strong>NOT</strong> suitable for charging the lithium battery.</li>
+<li>Based of calculation provided in the dataseet, the charger will charge at 0.6A whereas the battery is rated at charging current of 150mAh (<strong>much higher!</strong>)</li>
 </ol>
 
   </article>
@@ -130,7 +128,18 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Formula</h2>
+    <h2>Formula for calculating dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/formula.JPG" alt="formula sheet"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Formula for calculating dataset</h2>
   </hgroup>
   <article data-timings="">
     <p>I(Bat) = V(Prog) * 1200 / R(Prog)</p>
@@ -170,7 +179,7 @@
     <h2>Removing the resistor</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Desoldering</h3>
+    <h3>Step1: Desoldering</h3>
 
 <ul>
 <li>Temperature 380 degrees Celcius</li>
@@ -186,11 +195,14 @@
     <h2>Demo: Removing the existing resistor</h2>
   </hgroup>
   <article data-timings="">
-    <p>NOTE:: Rmbr to clean up using the desoldering wick
-1. dip the wick in the flux (which is a weak acid; which will remove the oxided parts)
-2. cover the soldering lumps with the wick and apply the soldering gun
-3. Rub
-4. flux cleaner on cotton buds and clean the board</p>
+    <p>NOTE:: Rmbr to clean up using the desoldering wick</p>
+
+<ol>
+<li>dip the wick in the flux (which is a weak acid; which will remove the oxided parts)</li>
+<li>cover the soldering lumps with the wick and apply the soldering gun</li>
+<li>Rub</li>
+<li>flux cleaner (spray) on cotton buds and clean the board</li>
+</ol>
 
   </article>
   <!-- Presenter Notes -->
@@ -214,6 +226,8 @@
   <article data-timings="">
     <p><img src="./assets/img/resistor.jpg" alt="resistor"></p>
 
+<p>Soldering gun temp: 330 degrees celcius</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -224,22 +238,24 @@
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Find the resistor using <strong>Electrodroid</strong> (reliable according to Joo Khai)
-
-<ul>
-<li>there’s different standard that exists</li>
-</ul></li>
-<li>Upside of the resistor has a label
----.class #id</li>
+<li>Find the resistor, check if ID corresponds to the desired ohms using android app <strong>Electrodroid</strong> (reliable according to Joo Khai)</li>
 </ul>
 
-<h2>Demo: Surface Mount Devices (SMD) Soldering</h2>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<ol>
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Surface Mount Devices (SMD) Soldering</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
 <li>use board-vice, </li>
-<li>add solder on one pad</li>
-<li>rest your wrist on the table.(shaky hands)</li>
-<li>melt solder on pad using a pair of tweezers grab component while the solder is still liquidified slide it in. </li>
+<li>add solder on one pad first</li>
+<li>rest your wrist on the table if you have shaky hands</li>
+<li>melt solder on pad using a pair of tweezers grab component while the solder is still liquidified then slide it in.</li>
+<li>complete the soldering on the other side</li>
 </ol>
 
   </article>
@@ -251,7 +267,8 @@
     <h2>Demo: Surface Mount Devices (SMD) Soldering</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="./assets/img/new.jpg" alt="resistor"></p>
+    <p>the finished product
+<img src="./assets/img/new.jpg" alt="resistor"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -264,7 +281,7 @@
   <article data-timings="">
     <ul>
 <li>verify if the soldering has been accurate:
-meter bet. ground and pin2 (the resistor we solderd)</li>
+multimeter bet. ground and pin2 (resistor we solderd) using the ?signal? mode</li>
 </ul>
 
   </article>
@@ -272,6 +289,9 @@ meter bet. ground and pin2 (the resistor we solderd)</li>
 </slide>
 
 <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The End</h2>
+  </hgroup>
   <article data-timings="">
     
   </article>
@@ -314,25 +334,25 @@ meter bet. ground and pin2 (the resistor we solderd)</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Issue: Rating Difference'>
+        data-slide=6 title='Difference'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Formula'>
+        data-slide=7 title='Formula for calculating dataset'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Removing the resistor'>
+        data-slide=8 title='Formula for calculating dataset'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Demo: Removing the existing resistor'>
+        data-slide=9 title='Removing the resistor'>
          9
       </a>
     </li>
@@ -344,7 +364,7 @@ meter bet. ground and pin2 (the resistor we solderd)</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Demo: Putting in the new resistor'>
+        data-slide=11 title='Demo: Removing the existing resistor'>
          11
       </a>
     </li>
@@ -356,20 +376,32 @@ meter bet. ground and pin2 (the resistor we solderd)</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Demo: Surface Mount Devices (SMD) Soldering'>
+        data-slide=13 title='Demo: Putting in the new resistor'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Demo: Verifying if the solderin worked'>
+        data-slide=14 title='Demo: Surface Mount Devices (SMD) Soldering'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title=''>
+        data-slide=15 title='Demo: Surface Mount Devices (SMD) Soldering'>
          15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Demo: Verifying if the solderin worked'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='The End'>
+         17
       </a>
     </li>
   </ul>

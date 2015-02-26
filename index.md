@@ -20,41 +20,50 @@ knit        : slidify::knit2slides
 ---.class #id
 
 ## Charger Components
+
+* Module: Lithium Battery Charge V0.2
 ![charger](./assets/img/charger.jpg)
 
 ---.class #id
 
 ## Charger Components
-* Module
- * Lithium Battery Charge V0.2
-* Lithium Ion (7V 150mAH)
 
-[Schema of the chip][1]
+* Lithium Ion (7V 150mAH)
+![battery](http://www.adafruit.com/images/1200x900/1317-00.jpg)
+
+[Click here for Schema of the chip][1]
 
 --- .class #id
 
 ## Schematics
 
-Specifications
 ![Charge controller IC](./assets/img/ChipSchematic.png)
 
 
 --- .class #id
 
 ## Initial Tasks
-1. Check the charing settings of the charge controller IC for the current and voltage it will be charging at.
-2. Check the Lithium Ion Battery's settings for the charging current and capacity. Compare the controller IC and the battery and see if they are compatible.
+
+Check:
+
+1. if charing settings of the **charge controller IC**   are comparable with Lithium Ion Battery's settings wrt. current and capacity.
 
 --- .class #id 
 
-## Issue: Rating Difference
-1. Off the shelf charger **NOT** suitable for charging the basic lithium battery itself
-2. Based of calculation provided in the dataseet, the charger will charge at 0.6A whereas the battery is rated at charging current of 150mAh
-3. Use an empty line followed by three dashes to separate slides!
+## Difference
+
+1. Off the shelf charger was **NOT** suitable for charging the lithium battery.
+2. Based of calculation provided in the dataseet, the charger will charge at 0.6A whereas the battery is rated at charging current of 150mAh (**much higher!**)
 
 --- .class #id 
 
-## Formula
+## Formula for calculating dataset
+
+![formula sheet](./assets/img/formula.JPG)
+
+--- .class #id 
+
+## Formula for calculating dataset
 
 I(Bat) = V(Prog) * 1200 / R(Prog)
 
@@ -70,7 +79,7 @@ Keeping the current constant, we figure out the
 
 ## Removing the resistor
 
-### Desoldering
+### Step1: Desoldering
 * Temperature 380 degrees Celcius
 * Air Volume 3.5Pa
 
@@ -79,10 +88,11 @@ Keeping the current constant, we figure out the
 ## Demo: Removing the existing resistor
 
 NOTE:: Rmbr to clean up using the desoldering wick
+
 1. dip the wick in the flux (which is a weak acid; which will remove the oxided parts)
 2. cover the soldering lumps with the wick and apply the soldering gun
 3. Rub
-4. flux cleaner on cotton buds and clean the board
+4. flux cleaner (spray) on cotton buds and clean the board
 
 ---.class #id
 
@@ -96,31 +106,39 @@ NOTE:: Rmbr to clean up using the desoldering wick
 
 ![resistor](./assets/img/resistor.jpg)
 
+Soldering gun temp: 330 degrees celcius
+
 ---.class #id
 
 ## Demo: Putting in the new resistor
 
-* Find the resistor using **Electrodroid** (reliable according to Joo Khai)
- * there’s different standard that exists
-* Upside of the resistor has a label
+* Find the resistor, check if ID corresponds to the desired ohms using android app **Electrodroid** (reliable according to Joo Khai)
+
 ---.class #id
 
 ## Demo: Surface Mount Devices (SMD) Soldering
 
 1. use board-vice, 
-2. add solder on one pad
-3. rest your wrist on the table.(shaky hands)
-4. melt solder on pad using a pair of tweezers grab component while the solder is still liquidified slide it in. 
-
+2. add solder on one pad first
+3. rest your wrist on the table if you have shaky hands
+4. melt solder on pad using a pair of tweezers grab component while the solder is still liquidified then slide it in.
+5. complete the soldering on the other side
 
 ---.class #id
 ## Demo: Surface Mount Devices (SMD) Soldering
+
+the finished product
 ![resistor](./assets/img/new.jpg)
 
 ---.class #id
 
 ## Demo: Verifying if the solderin worked
+
 * verify if the soldering has been accurate:
-    meter bet. ground and pin2 (the resistor we solderd)
+    multimeter bet. ground and pin2 (resistor we solderd) using the ?signal? mode
 
 ---.class #id
+
+## The End
+
+[1]: http://www.dfrobot.com/image/data/DFR0208/Lithium%20Battery%20%20charger%20SCH.pdf
