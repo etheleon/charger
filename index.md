@@ -22,6 +22,9 @@ knit        : slidify::knit2slides
 ## Charger Components
 ![charger](./assets/img/charger.jpg)
 
+---.class #id
+
+## Charger Components
 * Module
  * Lithium Battery Charge V0.2
 * Lithium Ion (7V 150mAH)
