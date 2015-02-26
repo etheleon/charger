@@ -29,9 +29,9 @@ knit        : slidify::knit2slides
 ## Charger Components
 
 * Lithium Ion (7V 150mAH)
-![battery](http://www.adafruit.com/images/1200x900/1317-00.jpg)
+![battery](http://www.airyear.com/images/products2/207532.jpg)
 
-[Click here for Schema of the chip][1]
+[Click here for Schema of the chip](http://www.dfrobot.com/image/data/DFR0208/Lithium%20Battery%20%20charger%20SCH.pdf)
 
 --- .class #id
 
@@ -71,9 +71,9 @@ Keeping the current constant, we figure out the
 
 | Symbol      | Description     | Value           |
 | ----        | ---             | ---             |
-| **I**(Bat)  | BAT Pin Current | 150mAh / 100mAh |
+| **I**(Bat)  | BAT Pin Current | 150mAh or 100mAh |
 | **V**(Prog) | Voltage         | 1V              |
-| R(Prog)     | Resistance      | 8/12 kOhm       |
+| R(Prog)     | Resistance      | 8 or 12 kOhm       |
 
 --- .class #id
 
@@ -98,6 +98,7 @@ NOTE:: Rmbr to clean up using the desoldering wick
 
 ## Demo: Removing the existing resistor
 
+Remember to remove the solder from before (image below before removing solder)
 ![resistor](./assets/img/notclean.jpg)
 
 ---.class #id
@@ -112,7 +113,7 @@ Soldering gun temp: 330 degrees celcius
 
 ## Demo: Putting in the new resistor
 
-* Find the resistor, check if ID corresponds to the desired ohms using android app **Electrodroid** (reliable according to Joo Khai)
+* Find the resistor, check if ID corresponds to the desired ohms using android app [Electrodroid](https://play.google.com/store/apps/details?id=it.android.demi.elettronica&hl=en) (reliable according to Joo Khai)
 
 ---.class #id
 
@@ -127,7 +128,8 @@ Soldering gun temp: 330 degrees celcius
 ---.class #id
 ## Demo: Surface Mount Devices (SMD) Soldering
 
-the finished product
+The finished product
+
 ![resistor](./assets/img/new.jpg)
 
 ---.class #id
@@ -135,10 +137,8 @@ the finished product
 ## Demo: Verifying if the solderin worked
 
 * verify if the soldering has been accurate:
-    multimeter bet. ground and pin2 (resistor we solderd) using the ?signal? mode
+    use a multimeter. place the electrodes on ground and pin2 (where our resistor is connected to) using the ?signal? mode
 
 ---.class #id
 
 ## The End
-
-[1]: http://www.dfrobot.com/image/data/DFR0208/Lithium%20Battery%20%20charger%20SCH.pdf
