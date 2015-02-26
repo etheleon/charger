@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learning Experience (Tinker Thursdays)</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Learning Experience (Tinker Thursdays)">
+  <meta name="author" content="OneMakerGroup">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Learning Experience (Tinker Thursdays)</h1>
+    <h2>Setting up Lithium ion batteries</h2>
+    <p>OneMakerGroup<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Objectives</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Charger Components</li>
+<li>Tasks</li>
+<li>Issues</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Charger Components</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/charger.jpg" alt="charger"></p>
+
+<ul>
+<li>Module
+
+<ul>
+<li>Lithium Battery Charge V0.2</li>
+</ul></li>
+<li>Lithium Ion (7V 150mAH)</li>
+</ul>
+
+<p>[Schema of the chip][1]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Schematics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Specifications
+<img src="./assets/img/ChipSchematic.png" alt="Charge controller IC"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Initial Tasks</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Check the charing settings of the charge controller IC for the current and voltage it will be charging at.</li>
+<li>Check the Lithium Ion Battery&#39;s settings for the charging current and capacity. Compare the controller IC and the battery and see if they are compatible.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Issue: Rating Difference</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Off the shelf charger <strong>NOT</strong> suitable for charging the basic lithium battery itself</li>
+<li>Based of calculation provided in the dataseet, the charger will charge at 0.6A whereas the battery is rated at charging current of 150mAh</li>
+<li>Use an empty line followed by three dashes to separate slides!</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Formula</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I(Bat) = V(Prog) * 1200 / R(Prog)</p>
+
+<p>Keeping the current constant, we figure out the </p>
+
+<table><thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>I</strong>(Bat)</td>
+<td>BAT Pin Current</td>
+<td>150mAh / 100mAh</td>
+</tr>
+<tr>
+<td><strong>V</strong>(Prog)</td>
+<td>Voltage</td>
+<td>1V</td>
+</tr>
+<tr>
+<td>R(Prog)</td>
+<td>Resistance</td>
+<td>8/12 kOhm</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Removing the resistor</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Desoldering</h3>
+
+<ul>
+<li>Temperature 380 degrees Celcius</li>
+<li>Air Volume 3.5Pa</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Removing the existing resistor</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>NOTE:: Rmbr to clean up using the desoldering wick
+1. dip the wick in the flux (which is a weak acid; which will remove the oxided parts)
+2. cover the soldering lumps with the wick and apply the soldering gun
+3. Rub
+4. flux cleaner on cotton buds and clean the board</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Removing the existing resistor</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/notclean.jpg" alt="resistor"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Putting in the new resistor</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/resistor.jpg" alt="resistor"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Putting in the new resistor</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Find the resistor using <strong>Electrodroid</strong> (reliable according to Joo Khai)
+
+<ul>
+<li>there’s different standard that exists</li>
+</ul></li>
+<li>Upside of the resistor has a label
+---.class #id</li>
+</ul>
+
+<h2>Demo: Surface Mount Devices (SMD) Soldering</h2>
+
+<ol>
+<li>use board-vice, </li>
+<li>add solder on one pad</li>
+<li>rest your wrist on the table.(shaky hands)</li>
+<li>melt solder on pad using a pair of tweezers grab component while the solder is still liquidified slide it in. </li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Surface Mount Devices (SMD) Soldering</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/new.jpg" alt="resistor"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Demo: Verifying if the solderin worked</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>verify if the soldering has been accurate:
+meter bet. ground and pin2 (the resistor we solderd)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Objectives'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Charger Components'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Schematics'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Initial Tasks'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Issue: Rating Difference'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Formula'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Removing the resistor'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Demo: Removing the existing resistor'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Demo: Removing the existing resistor'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Demo: Putting in the new resistor'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Demo: Putting in the new resistor'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Demo: Surface Mount Devices (SMD) Soldering'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Demo: Verifying if the solderin worked'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title=''>
+         14
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
